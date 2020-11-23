@@ -162,10 +162,21 @@
         <button>Business Profile</button>
         <br>
         <div class="form-box" data-errormsg="">
-          <label for="input-website">Contact Person's Email</label>
+          <label for="input-website">Business Structure(corporation, LLC, Sole Prop, ect.)</label>
           <br>
           <input type="text" id="input-business-structure" autofocus placeholder="" />
         </div>
+        <br>
+        <div class="form-box" data-errormsg="">
+          <label for="input-website">Federal Tax ID</label>
+          <br>
+          <input type="text" id="input-ferdal-tax-id" autofocus placeholder="" />
+        </div>
+        <label for="input-owner">Date of Birth</label>
+        <br>
+        <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="profile-date-business-formed"
+          size="12" data-maxlength="12" data-age="" value="" data-format="ddmmyyyy" data-seperator="-"
+          placeholder="dd-mm-yyyy" date-val="1605547037814">
         <br>
         <label for="state" class="col-sm-2 control-label">State Business was Created in?</label>
         <div class="col-sm-10">
@@ -227,6 +238,36 @@
             </select>
           </div>
         </div>
+        <div class="form-box" data-errormsg="">
+          <label for="input-website">Number of Employees</label>
+          <br>
+          <input type="text" id="input-number-employees" autofocus placeholder="" />
+        </div>
+        <br>
+        <div class="form-box" data-errormsg="">
+          <label for="input-website">Trade reference 1 - Business name</label>
+          <br>
+          <input type="text" id="input-trade-reference-1" autofocus placeholder="" />
+        </div>
+        <br>
+        <div class="form-box" data-errormsg="">
+          <label for="input-website">Contact name and number (of reference 1)</label>
+          <br>
+          <input type="text" id="input-contact-name-number-1" autofocus placeholder="" />
+        </div>
+        <br>
+        <div class="form-box" data-errormsg="">
+          <label for="input-website">Trade Reference 2 - Business</label>
+          <br>
+          <input type="text" id="input-trade-reference-2" autofocus placeholder="" />
+        </div>
+        <br>
+        <div class="form-box" data-errormsg="">
+          <label for="input-website">Contact name and number (of contact 2) </label>
+          <br>
+          <input type="text" id="input-contact-name-number-2" autofocus placeholder="" />
+        </div>
+        <br>
       </div>
       <div class="owner-info-container">
         <button>Owner Information</button>
