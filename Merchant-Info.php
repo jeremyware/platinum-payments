@@ -1,3 +1,8 @@
+<?php
+include_once 'includes/dbh-inc.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
