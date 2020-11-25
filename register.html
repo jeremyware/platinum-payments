@@ -27,6 +27,48 @@
     </span>
   </div>
 
+
+  <div class="product-info-container">
+    <br>
+    <button class="btn-left">Product Info</button>
+    <br>
+    <label for="product-info">Briefly describe product/service</label>
+    <br>
+    <textarea id="input_35" class="form-textarea" name="brieflyDescribe" cols="40" rows="6" data-component="textarea"
+      aria-labelledby="label_35"></textarea>
+    <br>
+    <label for="projected-volume">Projected Annual Volume</label>
+    <br>
+    <input type="text" id="projectedVolume" placeholder="PAV">
+    <br>
+    <label for="projected-volume">Average Ticket</label>
+    <br>
+    <input type="text" id="averageTicket" placeholder="AT">
+    <br>
+    <label for="projected-volume">High Ticket</label>
+    <br>
+    <input type="text" id="highTicket" placeholder="HT">
+    <div class="product-info transaction-type">
+      <div class="selector-column">
+        <span class="form-radio-item" style="clear:left">
+          <input type="radio" class="form-radio" id="input-card-swipe" name="product-info-selector" value="card-swipe">
+          <label id="label-card-swipe" for="input-card-swipe"> Card Swipe </label>
+        </span>
+        <br>
+        <span class="form-radio-item" style="clear:left">
+          <input type="radio" class="form-radio" id="input-mail-telephone" name="product-info-selector"
+            value="mail-telephone">
+          <label id="label-mail-telephone" for="input-mail-telephone"> Mail order/Telephone order </label>
+        </span>
+        <br>
+        <span class="form-radio-item" style="clear:left">
+          <input type="radio" class="form-radio" id="input-internet-ecommerce" name="product-info-selector"
+            value="internet-ecommerce">
+          <label id="label-internet-ecommerce" for="input-internet-ecommerce"> Internet/Ecommerce </label>
+        </span>
+      </div>
+    </div>
+  </div>
 </body>
 
 </html>

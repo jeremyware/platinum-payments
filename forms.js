@@ -77,5 +77,14 @@ const validate = function (ev) {
  return failures;
 }
 
+$('form').on('submit', function () {
+ $(this).find('input[type="tel"]').each(function () {
+  $(this).val() = $(this).val().replace(/[\s().+-]/g, '');
+ });
+ $(this).find('input[name="ssn"]').each(function () {
+  $(this).val() = $(this).val().replace(/-/g, '');
+ });
+});
+
 
 document.addEventListener('DOMContentLoaded', init);
