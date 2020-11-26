@@ -12,23 +12,25 @@
     <h1>Logo Center</h1>
   </header>
   <br>
+
   <h1>RETAIL QUESTIONNAIRE FORM</h1>
-  <button>Business Information</button>
-  <form action="/includes/insert.php">
+  <form id="form-main-container" action="/insert.php" method="POST">
+    <button>Business Information</button>
     <div class="form-box error" data-errormsg="">
       <label for="label-dba">DBA</label>
       <br>
-      <input type="text" id="input-DBA" name="dba-user" />
+      <input type="text" id="input-dba" name="dba-username" required />
     </div>
 
     <div class="form-box" data-errormsg="">
       <label for="input-companyAddress">Company Address</label>
       <br>
-      <input type="text" id="input-street" name="company-street-address" placeholder="street address" />
+      <input type="text" id="input-street" name="company-street-address" placeholder="street address" required />
 
-      <input type="text" id="input-line-2" name="company-street-address-line-2" placeholder="street address line 2" />
+      <input type="text" id="input-line-2" name="company-street-address-line-2" placeholder="street address line 2"
+        required />
 
-      <input type="text" id="input-city" name="company-zip" placeholder="City" />
+      <input type="text" id="input-city" name="company-city" placeholder="City" required />
       <br>
     </div>
 
@@ -93,7 +95,7 @@
       </div>
     </div>
     <div class="form-box" data-errormsg="">
-      <input type="text" id="input-zip" placeholder="Zip Code" />
+      <input type="text" id="input-zip" name="company-zip" placeholder="Zip Code" required />
     </div>
 
     <div class="form-box" data-errormsg="">
