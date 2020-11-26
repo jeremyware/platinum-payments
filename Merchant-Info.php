@@ -20,7 +20,7 @@ include_once 'includes/dbh-inc.php';
   <h1>Merchant Info Questionnaire</h1>
   <button class="btn-left">Business Information</button>
 
-  <form id="form-main-container" action="#" method="post">
+  <form id="form-main-container" action="/includes/insert.php" method="POST">
     <div class="form-box error" data-errormsg="">
       <label for="input-DBA">DBA(Name that will be on the card holders bill)</label>
       <br>
@@ -757,6 +757,7 @@ include_once 'includes/dbh-inc.php';
           <input type="text" name="tangible-product" id="input-tangible-product">
           <br>
           <label for="label-order-information">Who is taking the order?</label>
+          <br>
           <input type="text" name="order-information" id="input-order-information">
           <br>
           <label for="label-cardholder-billing-information">At what time or point during the ordering process does the merchant or the fulfillment center bill the cardholder (i.e at time of order, at time of shipping, etc…)?</label>
@@ -764,6 +765,7 @@ include_once 'includes/dbh-inc.php';
           <input type="text" name="cardholder-billing-information" id="input-cardholder-billing-information">
           <br>
           <label for="label-product-unavailable-update">What happens if the product is unavailable or if service cannot be rendered (i.e. cease billing customer, issue refund, or notify customer of delayed shipment)?</label>
+          <br>
           <input type="text" name="product-unavailable-update" id="input-product-unavailable-update">
           <br>
           <label for="label-backorder-acceptance">Do you continue to accept sales if products/services are backorder/unavailable?
@@ -782,12 +784,15 @@ include_once 'includes/dbh-inc.php';
           <label for="label-customer-service-outsourced">If Customer Service is outsourced, has anyone from your company visited the customer service facility? Will there be impromptu visits to the call center going forward?</label>
           <br>
           <input type="text" name="customer-service-outsourced" id="input-customer-service-outsourced">
+          <br>
           <label for="label-customer-service-training">Has anyone from your company participated in the training of the customer service staff?</label>
+          <br>
           <input type="text" name="customer-service-training" id="input-customer-service-training">
           <br>
           <label for="label-customer-service-house">If Customer Service handled In House, how many customer service reps are on staff?</label>
           <br>
           <input type="text" name="customer-service-house" id="input-customer-service-house">
+          <br>
           <label for="label-customer-service-houses">What are your customer service hours?</label>
           <br>
           <input type="text" name="customer-service-houses" id="input-customer-service-houses">
