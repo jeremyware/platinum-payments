@@ -1,5 +1,5 @@
 <?php
-$dbausername = $_POST['dba-username'];
+$dbServername = $_POST['dba-username'];
 $companystreet = $_POST['company-street-address'];
 $companystreetline2 = $_POST['company-street-address-line-2'];
 $companyzip = $_POST['company-zip'];
@@ -9,7 +9,7 @@ if (!empty($dbauser) || !empty($companystreet) || !empty($companystreetline2) ||
  $dbServername = "localhost";
  $dbUsername = "root";
  $dbPassword = "";
- $dbName = "platinum_payments";
+ $dbName = "register";
 
  // connection to remote server
  // if (!empty($dbauser) || !empty($companystreet) || !empty($companystreetline2) || !empty($companyzip)) {
@@ -22,8 +22,8 @@ if (!empty($dbauser) || !empty($companystreet) || !empty($companystreetline2) ||
  if (mysqli_connect_error()) {
   die('Connect Error(' . mysqli_connect_errno() . ')' . mysqli_connect_error());
  } else {
-  $SELECT = "SELECT dbausername From register Where dbausername = ? Limit 1";
-  $INSERT = "INSERT Into register (dbausername, companystreet, , companystreetline2, companyzip) values(?, ?, ?, ?)";
+  $SELECT = "SELECT dbausername From platinum_payments Where dbausername = ? Limit 1";
+  $INSERT = "INSERT Into platinum_payments (dbausername, companystreet, companystreetline2, companyzip) values(?, ?, ?, ?)";
 
   // $SELECT = "SELECT dbauser From platinum_payments Where dbausername = ? Limit 1";
   // $INSERT = "INSERT Into platinum_payments (dbausername, companystreet, , companystreetline2, companyzip) values(?, ?, ?, ?, ?, ?)";
