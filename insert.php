@@ -5,7 +5,7 @@ $companystreetline2 = $_POST['company-street-address-line-2'];
 $companyzip = $_POST['company-zip'];
 
 // connection to localhost
-if (!empty($dbauser) || !empty($companystreet) || !empty($companystreetline2) || !empty($companyzip)) {
+if (!empty($dbausername) || !empty($companystreet) || !empty($companystreetline2) || !empty($companyzip)) {
  $dbServername = "localhost";
  $dbUsername = "root";
  $dbPassword = "";
@@ -13,7 +13,7 @@ if (!empty($dbauser) || !empty($companystreet) || !empty($companystreetline2) ||
 
  // connection to remote server
  // if (!empty($dbauser) || !empty($companystreet) || !empty($companystreetline2) || !empty($companyzip)) {
- //  $host = "https://db-dev.epype.net/";
+ //  $dbServername = "https://db-dev.epype.net/";
  //  $dbUsername = "jeremy";
  //  $dbPassword = "Epype2020!";
  //  $dbName = "jeremy_epype";
