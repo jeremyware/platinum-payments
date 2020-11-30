@@ -15,7 +15,7 @@
   <h1>Merchant Info Questionnaire</h1>
   <button class="btn-left">Business Information</button>
 
-  <form id="form-main-container" action="/includes/insert.php" method="POST">
+  <form id="form-main-container" action="/includes/insert-merchant.php" method="POST">
     <div class="form-box error" data-errormsg="">
       <label for="input-DBA">DBA(Name that will be on the card holders bill)</label>
       <br>
