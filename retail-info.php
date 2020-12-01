@@ -101,23 +101,23 @@
    <div class="form-number">
     <label for="input-companynumber">Company Phone Number</label>
     <br>
-    <input type="text" id="input-areacode" placeholder="Area Code" />
-    <input type="text" id="input-number" placeholder="Phone Number" />
+    <input type="text" id="input-areacode" name="company-area-code" placeholder="Area Code" />
+    <input type="text" id="input-number" name="company-phone-number" placeholder="Phone Number" />
    </div>
   </div>
   <div class="form-box" data-errormsg="">
    <div class="site-container">
     <label for="input-website">Website/URL</label>
     <br>
-    <input type="text" id="input-site" placeholder="www.example.com" />
+    <input type="text" id="input-site" name="company-website-url" placeholder="www.example.com" />
    </div>
   </div>
   <div class="form-box" data-errormsg="">
    <div class="site-container">
-    <label for="input-website">Contact Name</label>
+    <label for="input-contact-name">Contact Name</label>
     <br>
-    <input type="text" id="input-first" placeholder="First Name" />
-    <input type="text" id="input-last" placeholder="Last Name" />
+    <input type="text" id="input-first" name="contact-first-name" placeholder="First Name" />
+    <input type="text" id="input-last" name="contact-last-name" placeholder="Last Name" />
    </div>
   </div>
   <div class="business-profile-container">
@@ -127,21 +127,21 @@
      <div id="profile-form" class="profile-form-input-wide">
       <div class="selector-single-column">
        <span class="form-radio-item" style="clear:left">
-        <input type="radio" class="form-radio" id="input_corporation" name="businessProfile" value="Corporation">
+        <input type="radio" class="form-radio" id="input_corporation" name="business-corporation-radio" value="Corporation">
         <label id="label-corporation" for="input_corporation"> Corporation </label>
        </span>
        <span class="form-radio-item" style="clear:left">
-        <input type="radio" class="form-radio" id="input-llc" name="businessProfile" value="LLC">
+        <input type="radio" class="form-radio" id="input-llc" name="business-llc-radio" value="LLC">
         <label id="label-llc" for="input-llc"> LLC </label>
        </span>
        <span class="form-radio-item" style="clear:left">
-        <input type="radio" class="form-radio" id="input-sole-proprietor" name="businessProfile" value="Sole Proprietor">
+        <input type="radio" class="form-radio" id="input-sole-proprietor" name="business-proprietor-radio" value="Sole Proprietor">
         <label id="label-sole-proprietor" for="input-sole-proprietor"> Sole Proprietor </label>
        </span>
        <span class="form-radio-item" style="clear:left">
-        <input type="radio" class="form-radio" name="businessProfile" id="input-other" value="other">
+        <input type="radio" class="form-radio" name="business-other-radio" id="input-other" value="other">
         <label id="label-other" style="text-indent:0" for="input-other"> </label>
-        <input type="text" class="form-radio-other-input form-textbox" name="businessProfile[other]" data-otherhint="Other" placeholder="Other" size="15" id="input-other_1">
+        <input type="text" class="form-radio-other-input form-textbox" name="business-other-radio" data-otherhint="Other" placeholder="Other" size="15" id="input-other_1">
         <br>
        </span>
       </div>
@@ -152,7 +152,7 @@
      <label for="input-tax">Federal Tax ID</label>
      <br>
      <div class="form-box" data-errormsg="">
-      <input type="text" id="input-tax" placeholder="fed tax id" />
+      <input type="text" id="input-tax" name="federal-tax-id" placeholder="fed tax id" />
      </div>
     </div>
    </div>
@@ -161,13 +161,13 @@
    <label for="input-tax">Date Business Formed</label>
    <br>
    <div class="form-box" data-errormsg=""></div>
-   <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_13" size="12" data-maxlength="12" data-age="" value="" data-format="ddmmyyyy" data-seperator="-" placeholder="dd-mm-yyyy" aria-labelledby="label_13 sublabel_13_litemode" date-val="1605547037814">
+   <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="lite_mode_13" size="12" data-maxlength="12" data-age="" value="" data-format="ddmmyyyy" data-seperator="-" placeholder="dd-mm-yyyy" aria-labelledby="label_13 sublabel_13_litemode" date-val="1605547037814" name="date-business-formed">
   </div>
   <div>
    <label for="state" class="col-sm-2 control-label">State Business was Created in?</label>
    <div class="col-sm-10">
     <div class="form-box" data-errormsg="">
-     <select class="form-control" id="profile-state" name="state">
+     <select class="form-control" id="profile-state" name="business-state-created">
       <option value="">Please Select</option>
       <option value="AK">Alaska</option>
       <option value="AL">Alabama</option>
@@ -231,38 +231,38 @@
    <div class="form-box error" data-errormsg="">
     <label for="input-owner">Name</label>
     <br>
-    <input class="firstName" type="text" id="input-fn-owner" placeholder="First Name" />
-    <input class="lastName" type="text" id="input-ln-owner" placeholder="Last Name" />
+    <input class="firstName" type="text" id="input-fn-owner" placeholder="First Name" name="owner-information-first-name" />
+    <input class="lastName" type="text" id="input-ln-owner" placeholder="Last Name" name="owner-information-last-name" />
    </div>
 
    <div class="form-box" data-errormsg="">
     <label for="input-companyAddress">Title</label>
     <br>
-    <input type="text" id="input-street-info" placeholder="street address" />
+    <input type="text" id="input-street-info" placeholder="street address" name="owner-title" />
     <br>
     <label for="input-owner">Ownership age</label>
     <br>
-    <input type="text" id="input-" placeholder="ownership" />
+    <input type="text" id="input-" placeholder="ownership" name="owner-age" />
     <br>
     <label for="input-owner">SSN</label>
     <br>
-    <input type="text" id="input-ssn" placeholder="ssn" />
+    <input type="text" id="input-ssn" placeholder="ssn" name="owner-social" />
     <br>
     <label for="input-owner">Date of Birth</label>
     <br>
-    <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="info-date-of-birth" size="12" data-maxlength="12" data-age="" value="" data-format="ddmmyyyy" data-seperator="-" placeholder="dd-mm-yyyy" date-val="1605547037814">
+    <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="info-date-of-birth" size="12" data-maxlength="12" data-age="" value="" data-format="ddmmyyyy" data-seperator="-" placeholder="dd-mm-yyyy" date-val="1605547037814" name="owner-date-of-birth">
     <br>
     <label for="input-companyAddress">Company Address</label>
     <br>
-    <input type="text" id="" placeholder="street address" />
+    <input type="text" id="" placeholder="street address" name="owner-company-address" />
 
-    <input type="text" id="" placeholder="street address line 2" />
+    <input type="text" id="" placeholder="street address line 2" name="owner-company-address-line-2" />
 
-    <input type="text" id="" placeholder="City" />
+    <input type="text" id="" placeholder="City" name="owner-company-city" />
     <br>
     <label for="state" class="col-state">State</label>
     <div class="col">
-     <select class="form-control" id="state-info" name="state">
+     <select class="form-control" id="state-info" name="owner-company-state">
       <option value="">Please Select</option>
       <option value="AK">Alaska</option>
       <option value="AL">Alabama</option>
@@ -318,9 +318,9 @@
       <option value="WY">Wyoming</option>
      </select>
     </div>
-    <input type="text" id="input-zip-info" placeholder="Zip Code" />
+    <input type="text" id="input-zip-info" placeholder="Zip Code" name="owner-company-zip" />
     <br>
-    <input type="text" id="input-drivers-license" placeholder="DLN">
+    <input type="text" id="input-drivers-license" placeholder="DLN" name="owner-company-drivers-license">
    </div>
    <br>
    <div class="form-single-column" role="group" aria-labelledby="label_40" data-component="checkbox">
