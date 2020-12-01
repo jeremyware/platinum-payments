@@ -22,13 +22,33 @@ $ownerFirstName = $_POST['owner-information-last-name'];
 $ownerTitle = $_POST['owner-title'];
 $ownerAge = $_POST['owner-age'];
 $ownerSocial = $_POST['owner-social'];
-$ownerDateOfBirth = $_POST['owenr-date-of-birth'];
+$ownerDateOfBirth = $_POST['owner-date-of-birth'];
 $ownerCompanyAddress = $_POST['owner-company-address'];
 $ownerCompanyAddressLine2 = $_POST['owner-company-address-line-2'];
 $ownerCompanyCity = $_POST['owner-company-city'];
 $ownerCompanyState = $_POST['owner-company-state'];
 $ownerCompanyZipcode = $_POST['owner-company-zip'];
 $ownerCompanyAddress = $_POST['owner-company-drivers-license'];
+$secondaryOwnersFirstName = $_POST['secondary-owner-first-name'];
+$secondaryOwnersFirstName = $_POST['secondary-owner-last-name'];
+$secondaryOwnerTitle = $_POST['secondary-owner-title'];
+$secondaryOwnerAge = $_POST['secondary-owner-age'];
+$secondaryOwnerSocial = $_POST['secondary-owner-social'];
+$secondaryOwnerAddress = $_POST['secondary-owner-address'];
+$secondaryOwnerAddressLine2 = $_POST['secondary-owner-address-line-2'];
+$secondaryOwnerCity = $_POST['secondary-owner-city'];
+$secondaryOwnerState = $_POST['secondary-owner-state'];
+$secondaryOwnerZip = $_POST['secondary-owner-zip'];
+$secondaryOwnerDateOfBirth = $_POST['secondary-owner-drivers-license'];
+$describeProductInfo = $_POST['describe-product-info'];
+$productAnnualVolume = $_POST['product-annual-volume'];
+$productAverageTicket = $_POST['product-average-ticket'];
+$productHighTicket = $_POST['product-high-ticket'];
+$productInfoMailTelephone = $_POST['product-mail-telephone'];
+$productInfoInternetEcommerce = $_POST['product-internet-ecommerce'];
+
+
+
 
 
 
@@ -40,7 +60,7 @@ $ownerCompanyAddress = $_POST['owner-company-drivers-license'];
 //  $dbServername = "localhost";
 //  $dbUsername = "root";
 //  $dbPassword = "";
-//  $dbName = "register";
+//  $dbName = "";
 
 // connection to remote server
 if (!empty($dbaUserName) || !empty($companyStreet) || !empty($companyStreetLine2) || !empty($companyCity) || !empty($companyState) || !empty($companyZip)) {

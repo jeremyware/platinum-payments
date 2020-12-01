@@ -101,7 +101,6 @@
    <div class="form-number">
     <label for="input-companynumber">Company Phone Number</label>
     <br>
-    <input type="text" id="input-areacode" name="company-area-code" placeholder="Area Code" />
     <input type="text" id="input-number" name="company-phone-number" placeholder="Phone Number" />
    </div>
   </div>
@@ -325,44 +324,44 @@
    <br>
    <div class="form-single-column" role="group" aria-labelledby="label_40" data-component="checkbox">
     <span class="form-checkbox" style="clear:left">
-     <input type="checkbox" class="form-checkbox" id="form-check" name="" value="ADD 2ND OWNER INFO">
-     <label id="" for=""> ADD 2ND OWNER INFO </label>
+     <input type="checkbox" class="form-checkbox" id="form-check" name="" value="ADD SECONDARY OWNERSHIP INFO">
+     <label id="" for=""> ADD SECONDARY OWNERSHIP INFO </label>
     </span>
     <div div class="form-box error" data-errormsg="">
      <label for="input-owner">Name</label>
      <br>
-     <input class="firstName" type="text" id="" placeholder="First Name" />
-     <input class="lastName" type="text" id="" placeholder="Last Name" />
+     <input class="firstName" type="text" id="" placeholder="First Name" name="secondary-owner-first-name" />
+     <input class="lastName" type="text" id="" placeholder="Last Name" name="secondary-owner-last-name">
     </div>
 
     <div class="form-box" data-errormsg="">
      <label for="input-companyAddress">Title</label>
      <br>
-     <input type="text" id="" placeholder="street address" />
+     <input type="text" id="" name="secondary-owner-title" />
      <br>
      <label for="input-owner">Ownership age</label>
      <br>
-     <input type="text" id="" placeholder="ownership" />
+     <input type="text" id="" placeholder="ownership" name="secondary-owner-age" />
      <br>
      <label for="input-owner">SSN</label>
      <br>
-     <input type="text" id="" placeholder="ssn" />
+     <input type="text" id="" placeholder="ssn" name="secondary-owner-social" />
      <br>
      <label for="input-owner">Date of Birth</label>
      <br>
-     <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="" size="12" data-maxlength="12" data-age="" value="" data-format="ddmmyyyy" data-seperator="-" placeholder="dd-mm-yyyy" date-val="1605547037814">
+     <input type="text" class="form-textbox validate[limitDate, validateLiteDate]" id="" size="12" data-maxlength="12" data-age="" value="" data-format="ddmmyyyy" data-seperator="-" placeholder="dd-mm-yyyy" date-val="1605547037814" name="secondary-owner-date-of-birth">
      <br>
      <label for="input-companyAddress">Company Address</label>
      <br>
-     <input type="text" id="" placeholder="street address" />
+     <input type="text" id="" placeholder="street address" name="secondary-owner-address" />
 
-     <input type="text" id="" placeholder="street address line 2" />
+     <input type="text" id="" placeholder="street address line 2" name="secondary-owner-address-line-2" />
 
-     <input type="text" id="" placeholder="City" />
+     <input type="text" id="" placeholder="City" name="secondary-owner-city" />
      <br>
      <label for="state" class="col-state">State</label>
      <div class="col">
-      <select class="form-control" id="" name="state">
+      <select class="form-control" id="" name="secondary-owner-state">
        <option value="">Please Select</option>
        <option value="AK">Alaska</option>
        <option value="AL">Alabama</option>
@@ -418,9 +417,9 @@
        <option value="WY">Wyoming</option>
       </select>
      </div>
-     <input type="text" id="" placeholder="Zip Code" />
+     <input type="text" id="" placeholder="Zip Code" name="secondary-owner-zip" />
      <br>
-     <input type="text" id="" placeholder="DLN">
+     <input type="text" id="" placeholder="DLN" name="secondary-owner-drivers-license">
     </div>
     <br>
     <br>
@@ -431,33 +430,33 @@
     <br>
     <label for="product-info">Briefly describe product/service</label>
     <br>
-    <textarea id="input_35" class="form-textarea" name="brieflyDescribe" cols="40" rows="6" data-component="textarea" aria-labelledby="label_35"></textarea>
+    <textarea id="input_35" class="form-textarea" name="describe-product-info" cols="40" rows="6" data-component="textarea" aria-labelledby="label_35"></textarea>
     <br>
     <label for="projected-volume">Projected Annual Volume</label>
     <br>
-    <input type="text" id="projectedVolume" placeholder="PAV">
+    <input type="text" id="projectedVolume" placeholder="PAV" name="product-annual-volume">
     <br>
     <label for="projected-volume">Average Ticket</label>
     <br>
-    <input type="text" id="averageTicket" placeholder="AT">
+    <input type="text" id="averageTicket" name="product-average-ticket">
     <br>
     <label for="projected-volume">High Ticket</label>
     <br>
-    <input type="text" id="highTicket" placeholder="HT">
+    <input type="text" id="highTicket" name="product-high-ticket">
     <div class="product-info transaction-type">
      <div class="selector-column">
       <span class="form-radio-item" style="clear:left">
-       <input type="radio" class="form-radio" id="input-card-swipe" name="product-info-selector" value="card-swipe">
+       <input type="radio" class="form-radio" id="input-card-swipe" name="product-card-swipe" value="card-swipe">
        <label id="label-card-swipe" for="input-card-swipe"> Card Swipe </label>
       </span>
       <br>
       <span class="form-radio-item" style="clear:left">
-       <input type="radio" class="form-radio" id="input-mail-telephone" name="product-info-selector" value="mail-telephone">
+       <input type="radio" class="form-radio" id="input-mail-telephone" name="product-mail-telephone" value="mail-telephone">
        <label id="label-mail-telephone" for="input-mail-telephone"> Mail order/Telephone order </label>
       </span>
       <br>
       <span class="form-radio-item" style="clear:left">
-       <input type="radio" class="form-radio" id="input-internet-ecommerce" name="product-info-selector" value="internet-ecommerce">
+       <input type="radio" class="form-radio" id="input-internet-ecommerce" name="product-internet-ecommerce" value="internet-ecommerce">
        <label id="label-internet-ecommerce" for="input-internet-ecommerce"> Internet/Ecommerce </label>
       </span>
      </div>
