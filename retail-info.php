@@ -87,10 +87,8 @@
     <option value="WY">Wyoming</option>
    </select>
   </div>
-  </div>
 
   <input type="text" id="input-zip" name="company-zip" placeholder="Zip Code" required />
-  </div>
 
   <div class="form-number">
    <label for="input-companynumber">Company Phone Number</label>
