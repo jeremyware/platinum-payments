@@ -1,10 +1,10 @@
 <?php
 
 
-$dbServername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "register";
+$dbServername = "54.198.136.152";
+$dbUsername = "jeremy";
+$dbPassword = "Epype2020!";
+$dbName = "jeremy_epype";
 
 
 

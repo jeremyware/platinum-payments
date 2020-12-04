@@ -15,28 +15,28 @@
   <h1>Merchant Info Questionnaire</h1>
   <button class="btn-left">Business Information</button>
 
-  <form id="form-main-container" action="/includes/insert-retail.php" method="POST">
+  <form id="form-main-container" action="/includes/merchant-insert.php" method="POST">
     <div class="form-box error" data-errormsg="">
       <label for="input-DBA">DBA(Name that will be on the card holders bill)</label>
       <br>
-      <input type="text" id="input-dba" placeholder="DBA" />
+      <input type="text" id="input-dba" placeholder="DBA" name="	merchantinfo" />
     </div>
 
     <div class="form-box" data-errormsg="">
       <label for="input-companyAddress">Location Address</label>
       <br>
-      <input type="text" id="input-street" placeholder="street address" />
+      <input type="text" id="input-street" placeholder="street address" name="company-street-address" />
 
-      <input type="text" id="input-line-2" placeholder="street address line 2" />
+      <input type="text" id="input-line-2" placeholder="street address line 2" name="company-street-address-line-2" />
 
-      <input type="text" id="input-city" placeholder="City" />
+      <input type="text" id="input-city" placeholder="City" name="company-city" />
       <br>
     </div>
 
     <div class="form-box" data-errormsg="">
       <label for="state" class="col-sm-2 control-label">State</label>
       <div class="col-sm-10-merchant">
-        <select class="form-control" id="state" name="state">
+        <select class="form-control" id="state" name="company-state'">
           <option value="">Please Select</option>
           <option value="AK">Alaska</option>
           <option value="AL">Alabama</option>
@@ -91,10 +91,10 @@
           <option value="WV">West Virginia</option>
           <option value="WY">Wyoming</option>
         </select>
-      </div>
+      </div>∂
     </div>
     <div class="form-box" data-errormsg="">
-      <input type="text" id="input-zip" placeholder="Zip Code" />
+      <input type="text" id="input-zip" placeholder="Zip Code" name="company-zip" />
     </div>
 
     <div class="form-box" data-errormsg="">

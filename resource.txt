@@ -81,46 +81,52 @@
   secondaryOwnerZip, secondaryOwnerDateOfBirth, describeProductInfo, productAnnualVolume, productAverageTicket, productHighTicket, productInfoMailTelephone, 
   productInfoInternetEcommerce
 
-  // $companyPhoneNumber,
-    // $companywebsiteUrl,
-    // $companyFirstName,
-    // $companyLastName,
-    // $businessCoporationRadio,
-    // $businessLlcRadio,
-    // $businessProprietorRadio,
-    // $businessOtherRadio,
-    // $federalTaxId,
-    // $businessDateFormed,
-    // $businessStateCreated,
-    // $ownerFirstName,
-    // $ownerFirstName,
-    // $ownerTitle,
-    // $ownerAge,
-    // $ownerSocial,
-    // $ownerDateOfBirth,
-    // $ownerCompanyAddress,
-    // $ownerCompanyAddressLine2,
-    // $ownerCompanyCity,
-    // $ownerCompanyState,
-    // $ownerCompanyZip,
-    // $ownerCompanyDriversLicense,
-    // $secondaryOwnersFirstName,
-    // $secondaryOwnersLastName,
-    // $secondaryOwnerTitle,
-    // $secondaryOwnerAge,
-    // $secondaryOwnerSocial,
-    // $secondaryOwnerAddress,
-    // $secondaryOwnerAddressLine2,
-    // $secondaryOwnerCity,
-    // $secondaryOwnerState,
-    // $secondaryOwnerZip,
-    // $secondaryOwnerDateOfBirth,
-    // $describeProductInfo,
-    // $productAnnualVolume,
-    // $productAverageTicket,
-    // $productHighTicket,
-    // $productInfoMailTelephone,
-    // $productInfoInternetEcommerce
+  // $dbaUserName 
+$companyCity 
+$companyState 
+$companyZip 
+$companyStreet 
+$companyStreetLine2
+$companyPhoneNumber,
+    $companywebsiteUrl,
+    $companyFirstName,
+    $companyLastName,
+    $businessCoporationRadio,
+    $businessLlcRadio,
+    $businessProprietorRadio,
+    $businessOtherRadio,
+    $federalTaxId,
+    $businessDateFormed,
+    $businessStateCreated,
+    $ownerFirstName,
+    $ownerLastName,
+    $ownerTitle,
+    $ownerAge,
+    $ownerSocial,
+    $ownerDateOfBirth,
+    $ownerCompanyAddress,
+    $ownerCompanyAddressLine2,
+    $ownerCompanyCity,
+    $ownerCompanyState,
+    $ownerCompanyZip,
+    $ownerCompanyDriversLicense,
+    $secondaryOwnersFirstName,
+    $secondaryOwnersLastName,
+    $secondaryOwnerTitle,
+    $secondaryOwnerAge,
+    $secondaryOwnerSocial,
+    $secondaryOwnerAddress,
+    $secondaryOwnerAddressLine2,
+    $secondaryOwnerCity,
+    $secondaryOwnerState,
+    $secondaryOwnerZip,
+    $secondaryOwnerDateOfBirth,
+    $describeProductInfo,
+    $productAnnualVolume,
+    $productAverageTicket,
+    $productHighTicket,
+    $productInfoMailTelephone,
+    $productInfoInternetEcommerce
 
 $dbServername = $_POST['54.198.136.152'];
 $dbaUserName = $_POST['dba-username'];
@@ -223,3 +229,111 @@ name="product-high-ticket"
 name="product-card-swipe" 
 name="product-mail-telephone" 
 name="product-internet-ecommerce" 
+
+√<form>
+  <input type="radio" id="business-corporation" name="business-corporation-radio" value="corporation">
+  <label for="corporation>Corporation </label><br>
+  <input type="radio" id=" llc" name="business-llc-radio" value="llc">
+  <label for="female">llc</label><br>
+  <input type="radio" id="sole-proprietor" name="business-proprietor-radio" value="proprietor">
+  <label for="other"> Sole Proprietor</label>
+  <input type="radio" id="other" name="business-other-radio" value="other">
+  <label for="other">Other</label>
+</form>
+
+$_POST['business-corporation-radio'];
+$businessLlcRadio = $_POST['business-llc-radio"'];
+$businessProprietorRadio = $_POST['business-proprietor-radio'];
+
+
+dbServername 
+dbaUserName 
+companyCity 
+companyState 
+companyZip 
+companyStreet 
+companyStreetLine2 
+companyPhoneNumber 
+companyWebsiteUrl 
+companyFirstName 
+companyLastName 
+businessCoporationRadio 
+businessLlcRadio 
+businessProprietorRadio 
+businessOtherRadio 
+federalTaxId 
+businessDateFormed 
+businessStateCreated 
+ownerFirstName 
+ownerLastName 
+ownerTitle 
+ownerAge 
+ownerSocial 
+ownerDateOfBirth 
+ownerCompanyAddress 
+ownerCompanyAddressLine2 
+ownerCompanyCity 
+ownerCompanyState 
+ownerCompanyZip 
+ownerCompanyDriversLicense 
+secondaryOwnersFirstName 
+secondaryOwnersLastName 
+secondaryOwnerTitle 
+secondaryOwnerAge 
+secondaryOwnerSocial 
+secondaryOwnerAddress 
+secondaryOwnerAddressLine2 
+secondaryOwnerCity 
+secondaryOwnerState 
+secondaryOwnerZip  
+secondaryOwnerDateOfBirth
+describeProductInfo 
+productAnnualVolume 
+productAverageTicket 
+productHighTicket 
+productInfoMailTelephone 
+productInfoInternetEcommerce
+
+dbServername,
+dbaUserName,
+companyCity,
+companyState, 
+companyZip,
+companyStreet,
+companyStreetLine2,
+companyPhoneNumber,
+companyWebsiteUrl,
+companyFirstName,
+companyLastName,
+federalTaxId,
+businessDateFormed,
+businessStateCreated,
+ownerFirstName,
+ownerLastName,
+ownerTitle,
+ownerAge,
+ownerSocial,
+ownerDateOfBirth,
+ownerCompanyAddress,
+ownerCompanyAddressLine2,
+ownerCompanyCity,
+ownerCompanyState,
+ownerCompanyZip,
+ownerCompanyDriversLicense,
+secondaryOwnersFirstName,
+secondaryOwnersLastName,
+secondaryOwnerTitle,
+secondaryOwnerAge,
+secondaryOwnerSocial,
+secondaryOwnerAddress,
+secondaryOwnerAddressLine2,
+secondaryOwnerCity,
+secondaryOwnerState,
+secondaryOwnerZip,
+secondaryOwnerDateOfBirth,
+describeProductInfo,
+productAnnualVolume,
+productAverageTicket,
+productHighTicket,
+productInfoMailTelephone,
+productInfoInternetEcommerce

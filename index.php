@@ -1,3 +1,7 @@
+<?php
+require 'businessInfomation.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

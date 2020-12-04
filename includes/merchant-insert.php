@@ -28,8 +28,8 @@ if (!empty($dbaUserName) || !empty($companyStreet) || !empty($companyStreetLine2
   // $SELECT = "SELECT * From platinum_payments Where dbaUserName = ? Limit 1";
   // $INSERT = "INSERT Into platinum_payments (dbaUserName, companyStreet, companyStreetLine2, companyState, companyCity, companyZip) values(?, ?, ?, ?, ?, ?)";
 
-  $SELECT = "SELECT dbaUserName From platinum_payments Where dbaUserName = ? Limit 1";
-  $INSERT = "INSERT Into platinum_payments (dbaUserName, companyStreet, companyStreetLine2, companyState, companyCity, companyZip) values(?, ?, ?, ?, ?, ?)";
+  $SELECT = "SELECT dbaUserName From 	merchantinfo Where dbaUserName = ? Limit 1";
+  $INSERT = "INSERT Into 	merchantinfo (dbaUserName, companyStreet, companyStreetLine2, companyState, companyCity, companyZip) values(?, ?, ?, ?, ?, ?)";
 
   $stmt = $conn->prepare($SELECT);
   $stmt->bind_param("s", $dbaUserName);
