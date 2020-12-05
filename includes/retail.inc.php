@@ -8,8 +8,9 @@ $companyStreet = $_POST['company-street-address'];
 $companyStreetLine2 = $_POST['company-street-address-line-2'];
 $companyPhoneNumber = $_POST['company-phone-number'];
 $companyWebsiteUrl = $_POST['company-website-url'];
-$companyFirstName = $_POST['contact-first-name'];
-$companyLastName = $_POST['contact-last-name'];
+$contactFirstName = $_POST['contact-first-name'];
+$contactLastName = $_POST['contact-last-name'];
+$structureType = $_POST['structure-type'];
 $federalTaxId = $_POST['federal-tax-id'];
 $businessDateFormed = $_POST['date-business-formed'];
 $businessStateCreated = $_POST['state-business-created'];
@@ -55,7 +56,7 @@ if (!empty($dbaUserName) || !empty($federalTaxId) || !empty($ownerSocial) || !em
   } else {
 
     $SELECT = "SELECT dbaUserName From PlatinumPaymentRetailInfo Where dbaUserName = ? Limit 1";
-    $INSERT = "INSERT Into PlatinumPaymentRetailInfo (dbaUserName, companyCity, companyState, companyZip,companyStreet, companyStreetLine2, companyPhoneNumber, companyWebsiteUrl, companyFirstName, companyLastName, federalTaxId, businessDateFormed, businessStateCreated, ownerFirstName, ownerLastName, ownerTitle, ownerAge, ownerSocial, ownerDateOfBirth, ownerCompanyAddress, ownerCompanyAddressLine2, ownerCompanyCity, ownerCompanyState, ownerCompanyZip, ownerCompanyDriversLicense, secondaryOwnersFirstName, secondaryOwnersLastName, secondaryOwnerTitle, secondaryOwnerAge, secondaryOwnerSocial, secondaryOwnerAddress, secondaryOwnerAddressLine2, secondaryOwnerCity, secondaryOwnerState, secondaryOwnerZip, secondaryOwnerDateOfBirth, describeProductInfo, productAnnualVolume, productAverageTicket, productHighTicket, transactionType) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+    $INSERT = "INSERT Into PlatinumPaymentRetailInfo (dbaUserName, companyCity, companyState, companyZip,companyStreet, companyStreetLine2, companyPhoneNumber, companyWebsiteUrl, contactFirstName, contactLastName, structureType, federalTaxId, businessDateFormed, businessStateCreated, ownerFirstName, ownerLastName, ownerTitle, ownerAge, ownerSocial, ownerDateOfBirth, ownerCompanyAddress, ownerCompanyAddressLine2, ownerCompanyCity, ownerCompanyState, ownerCompanyZip, ownerCompanyDriversLicense, secondaryOwnersFirstName, secondaryOwnersLastName, secondaryOwnerTitle, secondaryOwnerAge, secondaryOwnerSocial, secondaryOwnerAddress, secondaryOwnerAddressLine2, secondaryOwnerCity, secondaryOwnerState, secondaryOwnerZip, secondaryOwnerDateOfBirth, describeProductInfo, productAnnualVolume, productAverageTicket, productHighTicket, transactionType) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     $stmt = $conn->prepare($SELECT);
     echo "Error:\n";
@@ -75,7 +76,7 @@ if (!empty($dbaUserName) || !empty($federalTaxId) || !empty($ownerSocial) || !em
       echo "Error:\n";
       print_r($conn->error_list);
       $stmt->bind_param(
-        "sssssssssssssssssssssssssssssiiiiiiiiiiii",
+        "ssssssssssssssssssssssssssssssiiiiiiiiiiii",
         $dbaUserName,
         $companyCity,
         $companyState,
@@ -84,8 +85,9 @@ if (!empty($dbaUserName) || !empty($federalTaxId) || !empty($ownerSocial) || !em
         $companyStreetLine2,
         $companyPhoneNumber,
         $companyWebsiteUrl,
-        $companyFirstName,
-        $companyLastName,
+        $contactFirstName,
+        $contactLastName,
+        $structureType,
         $federalTaxId,
         $businessDateFormed,
         $businessStateCreated,

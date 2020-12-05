@@ -32,9 +32,9 @@ if (!empty($dbaUserName) || !empty($companyStreet) || !empty($companyStreetLine2
   $INSERT = "INSERT Into 	merchantinfo (dbaUserName, companyStreet, companyStreetLine2, companyState, companyCity, companyZip) values(?, ?, ?, ?, ?, ?)";
 
   $stmt = $conn->prepare($SELECT);
-  $stmt->bind_param("s", $dbaUserName);
+  $stmt->bind_param("s", $p_dbaUserName);
   $stmt->execute();
-  $stmt->bind_result($dbaUserName);
+  $stmt->bind_result($p_dbaUserName);
   $stmt->store_result();
   $stmt->store_result();
   $stmt->fetch();

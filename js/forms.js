@@ -1,3 +1,11 @@
+function ownerDisplay(a) {
+ if (a == 1)
+  document.getElementById("secondary-owner").style.display = "none";
+ else
+  document.getElementById("secondary-owner").style.display = "block";
+}
+
+
 const init = function () {
  document.getElementById('button-next').addEventListener('click', reset);
  document.getElementById('button-submit').addEventListener('click', send);

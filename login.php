@@ -1,19 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include_once 'header.php';
+?>
 
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Document</title>
-</head>
+<section class="signup-form">
+  <h2>Log In</h2>
+  <div class="signup-form-form">
+    <form action="includes/login.inc.php" method="post">
+      <input type="text" name="uid" placeholder="Username/Email...">
+      <input type="password" name="pwd" placeholder="Password...">
+      <button type="submit" name="submit">Sign up</button>
+    </form>
+  </div>
+  <?php
 
-<body>
- <main>
-  <header>
-   <h1>Log In</h1>
-   <button type="submit">Submit</button>
-  </header>
- </main>
-</body>
+  if (isset($_GET["error"])) {
+    if ($_GET["error"] == "emptyinput") {
+      echo "<p>Fill in all fields!</p>";
+    } else if ($_GET["error"] == "wronglogin") {
+      echo "<p>Wrong login!</p>";
+    }
+  }
+  ?>
+</section>
 
-</html>
+<?php
+include_once 'footer.php';
+?>

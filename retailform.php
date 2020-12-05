@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+include_once 'header.php';
+?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
 
-<body>
-  <header>
-    <h1>Logo Center</h1>
-  </header>
-
+<br>
+<h1>RETAIL QUESTIONNAIRE FORM</h1>
+<form id="form-main-container" action="/includes/retail-inc.php" method="POST">
+  <button>Business Information</button>
   <br>
-  <h1>RETAIL QUESTIONNAIRE FORM</h1>
-  <div class="site-container">
-    <form id="form-main-container" action="/includes/insert-retail.php" method="POST">
-      <button>Business Information</button>
-      <br>
-      <br>
-      <label for="username">DBA</label>
-      <br>
-      <td> <input type="name" name="username" placeholder="username"></td>
-      <br>
+  <br>
+  <label for="username">DBA</label>
+  <br>
+  <td> <input type="name" name="username" placeholder="username"></td>
+  <br>
 
-      <label for="input-contact-name">Contact Name</label>
-      <br>
-      <input type="text" id="input-first" name="contact-first-name" placeholder="First Name" />
-      <input type="text" id="input-last" name="contact-last-name" placeholder="Last Name" />
+
   </div>
   <label for="input-companyAddress">Company Address</label>
   <br>
@@ -36,9 +23,9 @@
   <input type="text" id="input-city" name="company-city" placeholder="City" required />
   <br>
 
-  <label for="state" class="col-sm-2 control-label">State</label>
-  <div class="col-sm-10">
-    <select class="form-control" id="state" name="company-state">
+  <label for="state">State</label>
+  <div class="company-state">
+    <select class="state-control" id="state" name="company-state">
       <option value="">Please Select</option>
       <option value="AK">Alaska</option>
       <option value="AL">Alabama</option>
@@ -109,12 +96,36 @@
     <input type="text" id="input-site" name="company-website-url" placeholder="www.example.com" />
   </div>
   <br>
+  <label for="input-contact-name">Contact Name</label>
+  <br>
+  <input type="text" id="input-first" name="contact-first-name" placeholder="First Name" />
+  <input type="text" id="input-last" name="contact-last-name" placeholder="Last Name" />
+  <br>
+  <br>
   <div class="business-profile-container">
     <button>Business Profile</button>
     <br>
-    <br>
-    <div class="form-tax">
+
+    <p>Business Structure:</p>
+    <div>
+      <input type="radio" id="corporationChoice" name="structure-type" value="corporation">
+      <label for="structure-type-corp">Corporation</label>
+      <br>
+      <input type="radio" id="structure-type-llc" name="structure-type" value="llc">
+      <label for="llcChoice">LLC</label>
+      <br>
+      <input type="radio" id="proprietorChoice" name="structure-type" value="proprietor">
+      <label for="proprietorChoice">Sole Proprietor</label>
+      <br>
+      <input type="radio" id="otherChoice" value="other">
+      <input type="text" name="structure-type" placeholder="Other">
+    </div>
+
+
+
+    <div class="business-tax">
       <label for="input-tax">Federal Tax ID:</label>
+      <br>
       <input type="text" id="input-tax" name="federal-tax-id" placeholder="fed tax id" />
     </div>
     <br>
@@ -123,12 +134,12 @@
     <input type="date" id="businessFormed" name="date-business-formed">
     <br>
     <br>
-    <label for="state" class="col-sm-2 control-label">State Business was Created in?</label>
+    <label for="state">State Business was Created in?</label>
     <div class="col-sm-10">
 
-      <label for="state" class="col-sm-2 control-label">State</label>
+      <label for="state">State</label>
       <div class="col-sm-10">
-        <select class="form-control" id="state" name="state-business-created">
+        <select class="state-control" id="state" name="state-business-created">
           <option value="">Please Select</option>
           <option value="AK">Alaska</option>
           <option value="AL">Alabama</option>
@@ -217,7 +228,7 @@
         <br>
         <label for="state" class="col-state">State</label>
         <div class="col">
-          <select class="form-control" id="state-info" name="owner-company-state">
+          <select class="state-control" id="state-info" name="owner-company-state">
             <option value="">Please Select</option>
             <option value="AK">Alaska</option>
             <option value="AL">Alabama</option>
@@ -316,7 +327,7 @@
       <br>
       <label for="state" class="col-state">State</label>
       <div class="col">
-        <select class="form-control" id="" name="secondary-owner-state">
+        <select class="state-control" id="" name="secondary-owner-state">
           <option value="">Please Select</option>
           <option value="AK">Alaska</option>
           <option value="AL">Alabama</option>
@@ -403,9 +414,9 @@
           <div class="transaction-type-selector">
             <select name="transaction-selector" id="transactionType">
               <option selected hidden>Please Select</option>
-              <option value="cs">Card Swipe</option>
-              <option value="to">Mail order/Telephone Order</option>
-              <option value="ti">Internet/Ecommerce</option>
+              <option value="card swipe">Card Swipe</option>
+              <option value="mail/telephone">Mail order/Telephone Order</option>
+              <option value="internet/ecommerce">Internet/Ecommerce</option>
             </select>
           </div>
         </div>
@@ -413,9 +424,7 @@
       <div class="form-box">
         <button id="btn-submit">Submit</button>
       </div>
-      </form>
-
-      <script src="./forms.js"></script>
-</body>
-
-</html>
+</form>
+<?php
+include_once 'footer.php';
+?>
