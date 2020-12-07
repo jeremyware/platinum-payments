@@ -337,3 +337,10 @@ productAverageTicket,
 productHighTicket,
 productInfoMailTelephone,
 productInfoInternetEcommerce
+
+
+
+
+
+
+federalTaxId, businessDateFormed, businessStateCreated, ownerFirstName ownerLastName, ownerTitle, ownerAge, ownerSocial, ownerDateOfBirth, ownerCompanyAddress, ownerCompanyAddressLine2, ownerCompanyCity, ownerCompanyState, ownerCompanyZip, ownerCompanyDriversLicense, secondaryOwnersFirstName, secondaryOwnersLastName, secondaryOwnerTitle, secondaryOwnerAge, secondaryOwnerSocial, secondaryOwnerAddress, secondaryOwnerAddressLine2, secondaryOwnerCity, secondaryOwnerState, secondaryOwnerZip, secondaryOwnerDateOfBirth,

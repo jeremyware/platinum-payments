@@ -75,8 +75,7 @@ include_once 'formnavigation.php';
    <input type="text" id="input-first" name="contact-first-name" placeholder="First Name" />
    <input type="text" id="input-last" name="contact-last-name" placeholder="Last Name" />
    <div class="btn">
-    <button type="submit" name="submit">Previous</button>
-    <input type="submit" value="submit">
+    <button type="submit" name="submit">Submit</button>
    </div>
   </form>
  </div>

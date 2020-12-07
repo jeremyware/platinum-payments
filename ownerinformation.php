@@ -150,8 +150,7 @@ include_once 'formnavigation.php'
         <input type="text" id="" placeholder="DLN" name="secondary-owner-drivers-license">
       </fieldset>
       <div class="btn">
-        <input type="submit" name="previous" value="Previous">
-        <input type="submit" name="next" value="Next">
+        <button type="submit" name="submit">Submit</button>
       </div>
     </form>
   </div>

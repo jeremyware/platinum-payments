@@ -61,8 +61,6 @@ nav img {
   width: 60px;
 }
 
-nav ul {}
-
 nav ul li {
   list-style: none;
   float: left;
@@ -79,13 +77,29 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #31a6ff;
+  color: #74838f;
 }
 
 section {
   background-color: #fff;
   width: 94%;
   padding: 20px 3%;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 /* index */
@@ -199,6 +213,47 @@ section {
   cursor: pointer;
 }
 
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+}
+
+.radio-container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+.radio-container input:checked~.checkmark {
+  background-color: #007ecc;
+}
+
+
+
+.radio-container input:checked~.checkmark:after {
+  display: block;
+}
+
+.radio-container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
 /* owner information */
 
 .owner-information-form-form {
@@ -258,6 +313,48 @@ section {
   margin: 10px auto;
   cursor: pointer;
 }
+
+.product-radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.product-radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.product-radio-container:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+.product-radio-container input:checked~.checkmark {
+  background-color: #007ecc;
+}
+
+
+.product-radio-container input:checked~.checkmark:after {
+  display: block;
+}
+
+.product-radio-container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
 
 .btn {
   display: flex;

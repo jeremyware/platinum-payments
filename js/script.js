@@ -36,3 +36,7 @@ function showOther(checked) {
     document.getElementById('otherInput').style.display = 'none';
   }
 };
+
+$('.selfmessage').on('focus', function (e) {
+  $('#invite0').prop('checked', true);
+});

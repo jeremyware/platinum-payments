@@ -9,18 +9,24 @@ include_once 'formnavigation.php';
   <form action="">
    <p>Business Structure:</p>
    <fieldset class="structure-input-radio">
-    <label for="structure-type-corp">Corporation</label>
+    <label class="radio-container">Corporation
+     <input type="radio" checked="checked" name="radio">
+     <span class="checkmark"></span>
+    </label>
+    <label class="radio-container"> LLC
+     <input type="radio" name="radio">
+     <span class="checkmark"></span>
+    </label>
+    <label class="radio-container">Sole Propietor
+     <input type="radio" name="radio">
+     <span class="checkmark"></span>
+    </label>
+    <label for="invite0" class="radio-container">
+     <input type="radio" name="radio" id="invite0">
+     <textarea class=" selfmessage" for="invite0" name="self_invite" type="text" placeholder="Other"></textarea>
+     <span class="checkmark"></span>
+    </label>
 
-    <input type="radio" id="corporationChoice" name="structure-type" value="corporation">
-
-    <label for="llcChoice">LLC</label>
-    <input type="radio" id="llcChoice" name="structure-type" value="llc">
-
-    <label for="proprietorChoice">Sole Proprietor</label>
-    <input type="radio" id="proprietorChoice" name="structure-type" value="proprietor">
-    <label for="otherChoice">Other</label>
-    <input type="radio" name="structure-type" id="otherChoice" value="other" onchange="showOther(this.checked)">
-    <input type=" text" id="otherInput" placeholder="Other...">
    </fieldset>
    <label>Federal Tax ID:</label>
    <input type="text" id="input-tax" name="federal-tax-id" placeholder="fed tax id" />

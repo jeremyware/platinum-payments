@@ -10,7 +10,6 @@ $companyPhoneNumber = $_POST['company-phone-number'];
 $companyWebsiteUrl = $_POST['company-website-url'];
 $contactFirstName = $_POST['contact-first-name'];
 $contactLastName = $_POST['contact-last-name'];
-$structureType = $_POST['structure-type'];
 $federalTaxId = $_POST['federal-tax-id'];
 $businessDateFormed = $_POST['date-business-formed'];
 $businessStateCreated = $_POST['state-business-created'];

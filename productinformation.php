@@ -12,20 +12,30 @@ include_once 'formnavigation.php';
    <input type="text" id="projectedVolume" placeholder="PAV" name="product-annual-volume">
    <input type="text" id="averageTicket" name="product-average-ticket">
    <input type="text" id="highTicket" name="product-high-ticket">
-   <select name="transaction-selector" id="transactionType">
-    <option selected hidden>Please Select</option>
-    <option value="card swipe">Card Swipe</option>
-    <option value="mail/telephone">Mail order/Telephone Order</option>
-    <option value="internet/ecommerce">Internet/Ecommerce</option>
-   </select>
-   <div class="btn">
-    <button type="submit" name="submit">Previous</button>
-    <button type="submit" name="submit">Next</button>
-   </div>
+
+   <fieldset class="transaction-input-radio" name="transaction-input" id="transactionType">
+    <label class="product-radio-container">Card Swip
+     <input type="radio" checked="checked" name="radio">
+     <span class="checkmark"></span>
+    </label>
+    <label class="product-radio-container"> Mail order/Telephone Order
+     <input type="radio" name="radio">
+     <span class="checkmark"></span>
+    </label>
+    <label class="product-radio-container">Internet/Ecommerce
+     <input type="radio" name="radio">
+     <span class="checkmark"></span>
+    </label>
+    <div class="btn">
+     <button type="submit" name="submit">Previous</button>
+     <button type="submit" name="submit">Submit</button>
+    </div>
 
   </form>
  </div>
 </section>
+
+
 
 <?php
 include_once 'footer.php';
