@@ -1,6 +1,7 @@
 <?php
 include_once 'header.php';
 include_once 'formnavigation.php';
+include_once './includes/fileupload.inc.php';
 ?>
 
 
@@ -9,8 +10,9 @@ include_once 'formnavigation.php';
  <div class="business-information-form-form">
   <form action="includes/businessinfo.inc.php" method="POST">
    <h2>Business Information</h2>
-
-   <input type="text" name="username" placeholder="username">
+   <label for="business-name">Business Name:
+   </label>
+   <input type="text" name="bid" placeholder="Business Name">
    <input type="text" id="input-street" name="company-street-address" placeholder="street address" required />
    <input type="text" id="input-line-2" name="company-street-address-line-2" placeholder="street address line 2" required />
    <input type="text" id="input-city" name="company-city" placeholder="City" required />
@@ -74,8 +76,9 @@ include_once 'formnavigation.php';
    <input type="text" id="input-site" name="company-website-url" placeholder="www.example.com" />
    <input type="text" id="input-first" name="contact-first-name" placeholder="First Name" />
    <input type="text" id="input-last" name="contact-last-name" placeholder="Last Name" />
+   <input type="file" name="fileToUpload" id="fileToUpload">
    <div class="btn">
-    <button type="submit" name="submit">Submit</button>
+    <input type="submit" value=" Save " />
    </div>
   </form>
  </div>

@@ -1,132 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+$dbausername = $_POST['username'];
+$companyCity = $_POST['company-city'];
+$companyState = $_POST['company-state'];
+$companyZip = $_POST['company-zip'];
+$companyStreet = $_POST['company-street-address'];
+$companyStreetLine2 = $_POST['company-street-address-line-2'];
+$companyPhoneNumber = $_POST['company-phone-number'];
+$companyWebsiteUrl = $_POST['company-website-url'];
+$contactFirstName = $_POST['contact-first-name'];
+$contactLastName = $_POST['contact-last-name'];
 
-<body>
-  <div class="selector-column">
-    <span class="form-radio-item" style="clear:left">
-      <input type="radio" class="form-radio" id="input-card-swipe" name="product-info-selector" value="card-swipe">
-      <label id="label-card-swipe" for="input-card-swipe"> Card Swipe </label>
-    </span>
-    <br>
-    <span class="form-radio-item" style="clear:left">
-      <input type="radio" class="form-radio" id="input-mail-telephone" name="product-info-selector"
-        value="mail-telephone">
-      <label id="label-mail-telephone" for="input-mail-telephone"> Mail order/Telephone order </label>
-    </span>
-    <br>
-    <span class="form-radio-item" style="clear:left">
-      <input type="radio" class="form-radio" id="input-sole-proprietor" name="product-info-selector"
-        value="internet-ecommerce">
-      <label id="label-internet-ecommerce" for="input-internet-ecommerce"> Internet/Ecommerce </label>
-    </span>
-  </div>
+require_once "dbh.inc.php";
+require_once 'functions.inc.php';
+
+if (!empty($dbauseruame) || !empty($contactLastName) || !empty($contactFirstName)) {
+
+ $SELECT = "SELECT dbausername From PlatinumPaymentRetailInfo Where dbausername = ? Limit 1";
+ $INSERT = "INSERT Into PlatinumPaymentRetailInfo (dbausername, companycity, companystate, companyzip, companystreet, companystreetline2, companyphonenumber, companywebsiteurl, contactFirstname, contactlastname) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+ $stmt = $conn->prepare($SELECT);
+ $stmt->bind_param("s", $p_dbauserName);
+ $stmt->execute();
+ $stmt->bind_result($p_dbauserName);
+ $stmt->store_result();
+ $stmt->store_result();
+ $stmt->fetch();
+ $rnum = $stmt->num_rows;
+ if ($rnum == 0) {
+  $stmt->close();
+  $stmt = $conn->prepare($INSERT);
+  $stmt->bind_param("ssssssssii", $dbausername, $companyCity, $companyState, $companyZip, $companyStreet, $companyStreetLine2, $companyPhoneNumber, $companyWebsiteUrl, $contactFirstName, $contactLastName);
+  $stmt->execute();
+  header("location: ../businessprofile.php");
 
 
-  <div class="product-info-container">
-    <br>
-    <button class="btn-left">Product Info</button>
-    <br>
-    <label for="product-info">Briefly describe product/service</label>
-    <br>
-    <textarea id="input_35" class="form-textarea" name="brieflyDescribe" cols="40" rows="6" data-component="textarea"
-      aria-labelledby="label_35"></textarea>
-    <br>
-    <label for="projected-volume">Projected Annual Volume</label>
-    <br>
-    <input type="text" id="projectedVolume" placeholder="PAV">
-    <br>
-    <label for="projected-volume">Average Ticket</label>
-    <br>
-    <input type="text" id="averageTicket" placeholder="AT">
-    <br>
-    <label for="projected-volume">High Ticket</label>
-    <br>
-    <input type="text" id="highTicket" placeholder="HT">
-    <div class="product-info transaction-type">
-      <div class="selector-column">
-        <span class="form-radio-item" style="clear:left">
-          <input type="radio" class="form-radio" id="input-card-swipe" name="product-info-selector" value="card-swipe">
-          <label id="label-card-swipe" for="input-card-swipe"> Card Swipe </label>
-        </span>
-        <br>
-        <span class="form-radio-item" style="clear:left">
-          <input type="radio" class="form-radio" id="input-mail-telephone" name="product-info-selector"
-            value="mail-telephone">
-          <label id="label-mail-telephone" for="input-mail-telephone"> Mail order/Telephone order </label>
-        </span>
-        <br>
-        <span class="form-radio-item" style="clear:left">
-          <input type="radio" class="form-radio" id="input-internet-ecommerce" name="product-info-selector"
-            value="internet-ecommerce">
-          <label id="label-internet-ecommerce" for="input-internet-ecommerce"> Internet/Ecommerce </label>
-        </span>
-      </div>
-    </div>
-  </div>
-</body>
-
-</html>
-
-, companyPhoneNumber, 
-  companywebsiteUrl, companyFirstName, companyLastName, businessCoporationRadio, businessLlcRadio, businessProprietorRadio, businessOtherRadio, federalTaxId, 
-  businessDateFormed, businessStateCreated, ownerFirstName, ownerFirstName, ownerTitle, ownerAge, ownerSocial, ownerDateOfBirth, ownerCompanyAddress, 
-  ownerCompanyAddressLine2, ownerCompanyCity, ownerCompanyState, ownerCompanyZip, ownerCompanyDriversLicense, secondaryOwnersFirstName, secondaryOwnersLastName, 
-  secondaryOwnerTitle, secondaryOwnerAge, secondaryOwnerSocial, secondaryOwnerAddress, secondaryOwnerAddressLine2, secondaryOwnerCity, secondaryOwnerState, 
-  secondaryOwnerZip, secondaryOwnerDateOfBirth, describeProductInfo, productAnnualVolume, productAverageTicket, productHighTicket, productInfoMailTelephone, 
-  productInfoInternetEcommerce
-
-  // $dbaUserName 
-$companyCity 
-$companyState 
-$companyZip 
-$companyStreet 
-$companyStreetLine2
-$companyPhoneNumber,
-    $companywebsiteUrl,
-    $companyFirstName,
-    $companyLastName,
-    $businessCoporationRadio,
-    $businessLlcRadio,
-    $businessProprietorRadio,
-    $businessOtherRadio,
-    $federalTaxId,
-    $businessDateFormed,
-    $businessStateCreated,
-    $ownerFirstName,
-    $ownerLastName,
-    $ownerTitle,
-    $ownerAge,
-    $ownerSocial,
-    $ownerDateOfBirth,
-    $ownerCompanyAddress,
-    $ownerCompanyAddressLine2,
-    $ownerCompanyCity,
-    $ownerCompanyState,
-    $ownerCompanyZip,
-    $ownerCompanyDriversLicense,
-    $secondaryOwnersFirstName,
-    $secondaryOwnersLastName,
-    $secondaryOwnerTitle,
-    $secondaryOwnerAge,
-    $secondaryOwnerSocial,
-    $secondaryOwnerAddress,
-    $secondaryOwnerAddressLine2,
-    $secondaryOwnerCity,
-    $secondaryOwnerState,
-    $secondaryOwnerZip,
-    $secondaryOwnerDateOfBirth,
-    $describeProductInfo,
-    $productAnnualVolume,
-    $productAverageTicket,
-    $productHighTicket,
-    $productInfoMailTelephone,
-    $productInfoInternetEcommerce
+  echo "New record inserted sucessfully";
+ } else {
+  echo "Someone already registered using this username";
+ }
+ $stmt->close();
+ $conn->close();
+} else {
+ echo "All fields are required";
+ die();
+}
 
 $dbServername = $_POST['54.198.136.152'];
 $dbaUserName = $_POST['dba-username'];

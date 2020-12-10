@@ -74,10 +74,11 @@ include_once 'formnavigation.php'
           <input type="text" id="input-zip-info" placeholder="Zip Code" name="owner-company-zip" />
           <input type="text" id="input-drivers-license" placeholder="DLN" name="owner-company-drivers-license">
       </fieldset>
-
-      <input type="checkbox" id="secondaryCheck" value="yes" onchange="showHidden(this.checked)" name="owner2">
-      <label for="owner2">
+      <label class="checkbox-container" for="owner2">
         Add Secondary Ownership Info:
+        <input type="checkbox" id="secondaryCheck" value="yes" onchange="showHidden(this.checked)" name="owner2">
+      </label>
+
       </label><br>
       <fieldset id="hiddenForm" style="display:none;">
         <input class="firstName" type="text" id="" placeholder="First Name" name="secondary-owner-first-name" />

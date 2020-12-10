@@ -38,5 +38,5 @@ function showOther(checked) {
 };
 
 $('.selfmessage').on('focus', function (e) {
-  $('#invite0').prop('checked', true);
+  $('#other0').prop('checked', true);
 });

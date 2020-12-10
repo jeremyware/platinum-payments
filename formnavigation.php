@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once 'includes/functions.inc.php';
 ?>
 
@@ -16,21 +15,16 @@ include_once 'includes/functions.inc.php';
 
 <body>
 
- <nav>
+ <nav class="nav-form-btn-section">
   <div class="wrapper">
 
    <ul>
-    <li><a href="businessinformation.php">Business Information</a></li>
+    <li><a href="rtlbusinfo.php">Business Information</a></li>
     <li><a href="businessprofile.php">Business Profile</a></li>
-    <li><a href="ownerinformation.php">Owner Information</a></li>
+    <li><a href="rtlowninfo.php">Owner Information</a></li>
     <li><a href="productinformation.php">Product Information</a></li>
     <?php
-    if (isset($_SESSION["useruid"])) {
-     echo "<li><a href='profile.php'>Profile Page</a></li>";
-     echo "<li><a href='logout.php'>Logout</a></li>";
-    } else {
-     echo "<li><a href='login.php'>Log Out</a></li>";
-    }
+
     ?>
    </ul>
   </div>

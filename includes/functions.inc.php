@@ -1,6 +1,6 @@
 <?php
 
-// Check for empty input signup
+
 function emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat)
 {
 
@@ -12,7 +12,6 @@ function emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat)
 	return $result;
 }
 
-// Check invalid username
 function invalidUid($username)
 {
 
@@ -24,7 +23,6 @@ function invalidUid($username)
 	return $result;
 }
 
-// Check invalid email
 function invalidEmail($email)
 {
 
@@ -36,7 +34,6 @@ function invalidEmail($email)
 	return $result;
 }
 
-// Check if passwords matches
 function pwdMatch($pwd, $pwdrepeat)
 {
 
@@ -50,14 +47,14 @@ function pwdMatch($pwd, $pwdrepeat)
 
 function uidExists($conn, $username)
 {
-	$sql = "SELECT * FROM users WHERE usersUid = ? OR usersEmail = ?;";
+	$sql = "SELECT * FROM PlatinumPaymentUsers WHERE usersUid = ? OR usersEmail = ?;";
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
 		header("location: ../signup.php?error=stmtfailed");
 		exit();
 	}
 
-	mysqli_stmt_bind_param($stmt, "ss", $username, $username);
+	mysqli_stmt_bind_param($stmt, "ss", $username, $userEmail);
 	mysqli_stmt_execute($stmt);
 
 	$resultData = mysqli_stmt_get_result($stmt);
@@ -74,7 +71,7 @@ function uidExists($conn, $username)
 
 function createUser($conn, $name, $email, $username, $pwd)
 {
-	$sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
+	$sql = "INSERT INTO PlatinumPaymentUsers (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
 
 	$stmt = mysqli_stmt_init($conn);
 	if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -88,11 +85,10 @@ function createUser($conn, $name, $email, $username, $pwd)
 	mysqli_stmt_execute($stmt);
 	mysqli_stmt_close($stmt);
 	mysqli_close($conn);
-	header("location: ../signup.php?error=none");
+	header("location: ../home.php?error=none");
 	exit();
 }
 
-// Check for empty input login
 function emptyInputLogin($username, $pwd)
 {
 
@@ -104,7 +100,6 @@ function emptyInputLogin($username, $pwd)
 	return $result;
 }
 
-// Log user into website
 function loginUser($conn, $username, $pwd)
 {
 	$uidExists = uidExists($conn, $username);
@@ -124,7 +119,7 @@ function loginUser($conn, $username, $pwd)
 		session_start();
 		$_SESSION["userid"] = $uidExists["usersId"];
 		$_SESSION["useruid"] = $uidExists["usersUid"];
-		header("location: ../index.php?error=none");
+		header("location: ../home.php?error=none");
 		exit();
 	}
 }

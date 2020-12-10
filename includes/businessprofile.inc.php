@@ -6,17 +6,17 @@ $businessDateFormed = $_POST['date-business-formed'];
 $businessStateCreated = $_POST['state-business-created'];
 
 require_once "dbh.inc.php";
-require_once 'functions.inc.php';
+require_once 'formfunction.inc.php';
 
 if (!empty($federalTaxId) || !empty($businessDateFormed) || !empty($businessStateCreated)) {
 
- $SELECT = "SELECT dbausername From PlatinumPaymentRetailInfo Where dbausername = ? Limit 1";
- $INSERT = "INSERT Into PlatinumPaymentRetailInfo (structureType, federalTaxId, businessDateFormed, businessStateCreated,) values(?, ?, ?, ?)";
+ $SELECT = "SELECT businessname From PlatinumPaymentRetailInfo Where businessname = ? Limit 1";
+ $INSERT = "INSERT Into PlatinumPaymentRetailInfo (structureType, federalTaxId, businessDateFormed, businessStateCreated) values(?, ?, ?, ?)";
 
  $stmt = $conn->prepare($SELECT);
- $stmt->bind_param("s", $p_dbauserName);
+ $stmt->bind_param("s", $businessId);
  $stmt->execute();
- $stmt->bind_result($p_dbauserName);
+ $stmt->bind_result($businessId);
  $stmt->store_result();
  $stmt->store_result();
  $stmt->fetch();
@@ -24,15 +24,14 @@ if (!empty($federalTaxId) || !empty($businessDateFormed) || !empty($businessStat
  if ($rnum == 0) {
   $stmt->close();
   $stmt = $conn->prepare($INSERT);
-  $stmt->bind_param("ssss", $structureType, $federalTaxId, $businessDateFormed, $businessStateCreated,);
+  $stmt->bind_param("sssi", $structureType, $federalTaxId, $businessDateFormed, $businessStateCreated);
   $stmt->execute();
-  echo "New record inserted sucessfully";
+
+  $stmt->close();
+  $conn->close();
+  header("location: ../rtlowninfo.php");
  } else {
-  echo "Someone already registered using this username";
+  echo "All fields are required";
+  die();
  }
- $stmt->close();
- $conn->close();
-} else {
- echo "All fields are required";
- die();
 }

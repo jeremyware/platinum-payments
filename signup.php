@@ -15,7 +15,7 @@ include_once 'header.php';
     </form>
   </div>
   <?php
-
+  // Error messages
   if (isset($_GET["error"])) {
     if ($_GET["error"] == "emptyinput") {
       echo "<p>Fill in all fields!</p>";

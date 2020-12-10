@@ -42,6 +42,6 @@ if (isset($_POST["submit"])) {
 
   createUser($conn, $name, $email, $username, $pwd);
 } else {
-  header("location: ../signup.php");
+  header("location: ../home.php?chooseform");
   exit();
 }

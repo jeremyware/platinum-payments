@@ -6,7 +6,7 @@ include_once 'formnavigation.php';
 <section class="business-profile-form">
  <h2>Business Profile</h2>
  <div class="business-profile-form-form">
-  <form action="">
+  <form action="includes/businessprofile.inc.php" method="POST">
    <p>Business Structure:</p>
    <fieldset class="structure-input-radio">
     <label class="radio-container">Corporation
@@ -21,16 +21,18 @@ include_once 'formnavigation.php';
      <input type="radio" name="radio">
      <span class="checkmark"></span>
     </label>
-    <label for="invite0" class="radio-container">
-     <input type="radio" name="radio" id="invite0">
-     <textarea class=" selfmessage" for="invite0" name="self_invite" type="text" placeholder="Other"></textarea>
+    <label for="other0" class="radio-container">
+     <input type="radio" name="radio" id="other0">
+     <textarea class=" selfmessage" for="other0" name="self_other" type="text" placeholder="Other"></textarea>
      <span class="checkmark"></span>
     </label>
 
    </fieldset>
    <label>Federal Tax ID:</label>
    <input type="text" id="input-tax" name="federal-tax-id" placeholder="fed tax id" />
+   <label>Date Business Created</label>
    <input type="date" id="businessFormed" name="date-business-formed">
+   <label>State Business Create</label><br>
    <select class="state-control" id="profile-state" name="state-business-created">
     <option value="">Please Select</option>
     <option value="AK">Alaska</option>
@@ -87,8 +89,8 @@ include_once 'formnavigation.php';
     <option value="WY">Wyoming</option>
    </select>
    <div class="btn">
-    <button type="submit" name="submit">Previous</button>
-    <button type="submit" name="submit">Next</button>
+    <a href="/businessinformation.php">Previous</a>
+    <input type="submit" value=" Save " />
    </div>
   </form>
  </div>

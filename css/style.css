@@ -47,7 +47,7 @@ p {
 nav {
   width: 100%;
   height: 60px;
-  background-color: #111111;
+  background-color: #000000;
 }
 
 nav .wrapper {
@@ -58,7 +58,7 @@ nav .wrapper {
 }
 
 nav img {
-  width: 60px;
+  width: 120px;
 }
 
 nav ul li {
@@ -80,6 +80,7 @@ nav ul li a:hover {
   color: #74838f;
 }
 
+
 section {
   background-color: #fff;
   width: 94%;
@@ -100,6 +101,44 @@ section {
   content: "";
   position: absolute;
   display: none;
+}
+
+/* form navigation */
+
+.nav-form-btn-section {
+  width: 100%;
+  height: 60px;
+  background-color: #212121;
+}
+
+.nav-form-btn-section .wrapper {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-form-btn-section img {
+  width: 60px;
+}
+
+.nav-form-btn-section ul li {
+  list-style: none;
+  float: left;
+}
+
+.nav-form-btn-section ul li a {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 16px;
+  text-transform: uppercase;
+}
+
+.nav-form-btn-section ul li a:hover {
+  color: #74838f;
 }
 
 /* index */
@@ -354,6 +393,9 @@ section {
   border-radius: 50%;
   background: white;
 }
+
+/* checkbox styles */
+
 
 
 .btn {
