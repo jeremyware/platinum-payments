@@ -18,12 +18,12 @@ if (isset($_POST["submit"])) {
     header("location: ../signup.php?error=emptyinput");
     exit();
   }
-  // Proper username chosen
+  // username chosen
   if (invalidUid($uid) !== false) {
     header("location: ../signup.php?error=invaliduid");
     exit();
   }
-  // Proper email chosen
+  // email chosen
   if (invalidEmail($email) !== false) {
     header("location: ../signup.php?error=invalidemail");
     exit();
